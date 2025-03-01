@@ -1,3 +1,5 @@
+#typing "rcc" gives basic class template
+
 import React, { Component } from 'react'; 
 # This imports the React library, which is required to use JSX (<div>, <h2>, etc.).
 # It also imports `Component`, which allows us to create a class-based component.
