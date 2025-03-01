@@ -1,0 +1,19 @@
+// Importing the React library to enable JSX and component creation
+import React from 'react'; 
+
+// Defining a functional component named App
+const App = () => {  
+  // Defining a function that will be executed when the button is clicked
+  const handleClick = () => {  
+    alert('Button Clicked!'); // Displays an alert message when called
+  };
+
+  return (
+    // Rendering a button element with an onClick event
+    <button onClick={handleClick}>Click Me</button>  
+    // When the button is clicked, the handleClick function is executed
+  );
+};
+
+// Exporting the App component so it can be used in other files
+export default App;
