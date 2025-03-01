@@ -1,0 +1,12 @@
+import React from 'react';#This imports the React library, which is required to use JSX (<div>, <h1>, etc.).
+
+const App = () => {#This defines a functional component named App.The const App = () => {} syntax uses arrow functions, which is a modern way to declare functions in JavaScript.
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+    </div>
+  );
+};
+
+export default App;#This exports the App component, so it can be used in other files (like index.js).Without this, the component cannot be imported and displayed in your React app
+------------
