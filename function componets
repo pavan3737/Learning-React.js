@@ -1,0 +1,40 @@
+import React, { useState } from 'react';  
+# This imports the React library, which is required to use JSX (<div>, <h2>, etc.).  
+# It also imports the `useState` hook, which allows functional components to manage state.  
+# Unlike class-based components, functional components do not have `this.state`, so we use `useState` instead.  
+
+const App = () => {  
+# This defines a functional React component named `App` using an arrow function.  
+# Functional components are simpler and recommended for modern React development.  
+
+  const [name, setName] = useState("shiva reddy");  
+# This declares a state variable called `name` with an initial value of `"shiva reddy"`.  
+# `useState("shiva reddy")` initializes the state, similar to `this.state` in class components.  
+# `setName` is a function that updates the value of `name`.  
+# Whenever `setName` is called, the component **re-renders** with the new value.  
+
+  return (  
+  # The `return` statement specifies the JSX structure that will be rendered on the screen.  
+
+    <div>  
+    # `<div>` is a container element that wraps the content.  
+
+      <h2>  
+        Hello {name}  
+      </h2>  
+    # Inside `<h2>`, we display the text `"Hello"` followed by `{name}`, which dynamically inserts the `name` state value.  
+    # Since `name` is initialized as `"shiva reddy"`, the output will be:  
+    # 👉 "Hello shiva reddy"  
+
+      <button onClick={() => setName("Pavan Siva Reddy")}>Change Name</button>  
+    # This `<button>` updates the `name` state when clicked.  
+    # The `onClick` event calls `setName("Pavan Siva Reddy")`, changing the name dynamically.  
+
+    </div>  
+  );  
+}  
+# This closes the function `App`.  
+
+export default App;  
+# This exports the `App` component so it can be used in other files (like `index.js`).  
+# Without this, the component cannot be imported and displayed in your React app.  
