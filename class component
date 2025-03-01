@@ -1,0 +1,25 @@
+import React, { Component } from 'react'; 
+# This imports the React library, which is required to use JSX (<div>, <h2>, etc.).
+# It also imports `Component`, which allows us to create a class-based component.
+ export default class App extends Component {
+# This defines a class-based React component named `App`, which extends the `Component` class from React.
+# In class-based components, we must extend `Component` to get access to features like `state` and `lifecycle methods`.
+  state = {
+    name: "shiva reddy"
+  }
+# This initializes a state object inside the component.
+# The `state` contains a key-value pair (`name: "shiva reddy"`), which stores the component’s data.
+# Unlike functional components, state is managed directly inside class components.
+
+    render() {
+# The `render()` method is required in class-based components.
+# It determines what gets displayed on the screen.
+
+    return (
+      <div>
+        <h2>Hello {this.state.name}</h2>    
+      </div>
+    )
+# This returns JSX, which defines the UI.
+# `<div>` is a wrapper element, and inside it, `<h2>` displays a greeting message.
+# `{this.state.name}` dynamically fetches the `name` value from the component’s state and displays it inside the heading.
