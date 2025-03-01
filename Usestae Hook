@@ -1,0 +1,37 @@
+// Import React and the useState hook
+import React, { useState } from 'react';
+
+const CounterApp = () => {
+  // Declare a state variable 'count' and initialize it to 0
+  const [count, setCount] = useState(0);
+
+  // Function to increase count by 1
+  const increaseCount = () => {
+    setCount(count + 1);
+  };
+
+  // Function to decrease count by 1
+  const decreaseCount = () => {
+    setCount(count - 1);
+  };
+
+  // Function to reset count to 0
+  const resetCount = () => {
+    setCount(0);
+  };
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      {/* Display the current count */}
+      <h1>Counter: {count}</h1>
+
+      {/* Buttons to update the state onClick */}
+      <button onClick={increaseCount} style={{ margin: '5px', padding: '10px' }}>Increase</button>
+      <button onClick={decreaseCount} style={{ margin: '5px', padding: '10px' }}>Decrease</button>
+      <button onClick={resetCount} style={{ margin: '5px', padding: '10px' }}>Reset</button>
+    </div>
+  );
+};
+
+// Export the component for use in other files
+export default CounterApp;
