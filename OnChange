@@ -1,0 +1,35 @@
+import React, { useState } from 'react';
+
+const TextInputApp = () => {
+  // Declare state variable 'text' to store user input
+  const [text, setText] = useState('');
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>Type Something:</h1>
+
+      {/* Input field with onChange event handler */}
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)} // Update state with input value
+        placeholder="Type here..."
+        style={{ padding: '10px', fontSize: '16px' }}
+      />
+
+      {/* Display the user input */}
+      <p>You typed: {text}</p>
+    </div>
+  );
+};
+
+export default TextInputApp;
+
+********************
+How it Works?
+->useState('') initializes the text state with an empty string.
+->onChange={(e) => setText(e.target.value)} updates the state every time the user types.
+->The value attribute in the <input> ensures that the input field always reflects the current state.
+->Whatever is typed is displayed dynamically in <p>You typed: {text}</p>.
+
+
